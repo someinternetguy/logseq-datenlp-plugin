@@ -48,15 +48,15 @@ export const inlineParsing = async (
         newContent = `${newContent}
 start-time:: ${parsedStartObject.date().toTimeString().substring(0, 5)}
 end-time:: ${parsedEndObject.date().toTimeString().substring(0, 5)}`;
-      } else if (content.includes(`@${parsedText}`)) {
-        newContent = content.replace(
-          `@${parsedText}`,
-          getDateForPage(parsedDate, logseq.settings.preferredDateFormat)
-        );
       } else if (content.includes(`%${parsedText}`)) {
         newContent = content.replace(
+          `%${parsedText}`,
+          getDateForPage(parsedDate, logseq.settings.preferredDateFormat)
+        );
+      } else if (content.includes(`@${parsedText}`)) {
+        newContent = content.replace(
           content,
-          `${content.replace(`%${parsedText}`, "")}
+          `${content.replace(`@${parsedText}`, "")}
 SCHEDULED: <${getScheduledDeadlineDateDay(parsedDate)}${
             parsedStartObject.knownValues.hour !== undefined
               ? ` ${parsedDate.toTimeString().substring(0, 5)}`
