@@ -48,9 +48,9 @@ export const inlineParsing = async (
         newContent = `${newContent}
 start-time:: ${parsedStartObject.date().toTimeString().substring(0, 5)}
 end-time:: ${parsedEndObject.date().toTimeString().substring(0, 5)}`;
-      } else if (content.includes(`*${parsedText}`)) {
+      } else if (content.includes(`+${parsedText}`)) {
         newContent = content.replace(
-          `*${parsedText}`,
+          `+${parsedText}`,
           getDateForPage(parsedDate, logseq.settings.preferredDateFormat)
         );
       } else if (content.includes(`%${parsedText}`)) {
