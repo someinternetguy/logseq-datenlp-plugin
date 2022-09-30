@@ -1,11 +1,11 @@
 {
   "logseq": {
-    "id": "logseq-datenlp-plugin",
-    "title": "logseq-datenlp-plugin",
+    "id": "logseq-datenlp-plugin-dev",
+    "title": "logseq-datenlp-plugin-dev",
     "icon": "./icon.svg"
   },
-  "name": "logseq-datenlp-plugin",
-  "version": "3.11.2",
+  "name": "logseq-datenlp-plugin-dev",
+  "version": "3.11.2.1",
   "description": "",
   "main": "dist/index.html",
   "targets": {
